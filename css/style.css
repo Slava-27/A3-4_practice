@@ -493,20 +493,6 @@ p {
 	flex: 1 1 auto;
 	background-color: rgba(0, 0, 0, 0.8);
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 /* _________________________________ */
 footer {
 	background-color: rgba(0, 0, 0, 0.8);
@@ -528,8 +514,6 @@ footer {
 	justify-content: space-between;
 	align-items: center;
 }
-
-
 
 /* _________________________________ */
 @media screen and (max-width: 1200px) {
