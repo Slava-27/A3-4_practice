@@ -5,7 +5,6 @@
 	display: flex;
 	flex-direction: column;
 	font-family: Open Sans;
-	/* font-weight: normal; */
 	font-style: normal;
 }
 main {
@@ -27,7 +26,6 @@ p {
 	font-weight: 400;
 	line-height: 28px;
 }
-
 /* _________________________________ */
 .site_menu {
 	max-width: 1250px;
@@ -72,7 +70,6 @@ p {
 	margin-top: 78px;
 	justify-content: space-between;
 	align-items: flex-start;
-	/* background-color: #F6F2F2; */
 }
 .sub_content {
 	display: inline-block;
@@ -276,7 +273,6 @@ p {
 	width: 324px;
 	object-fit: cover;
 }
-
 .team_photo:hover h4 {
 	visibility: visible;
 }
@@ -311,7 +307,6 @@ p {
 .team_photo_wrapper {
 	display: flex;
 	flex-wrap: wrap;
-	/* использовать медиазапрос чтобы картинки в столбец не выстраивались */
 }
 .team_photo {
 	margin: 18px 6px 0 6px;
@@ -340,8 +335,7 @@ p {
 /* _________________________________ */
 .black_block {
 	margin-top: 100px;
-	height: 516px;
-	/* использовать медиазапрос height: 516px;*/
+	min-height: 516px;
 	background-color: rgba(0, 0, 0, 0.8);
 	text-align: center;
 	align-content: center;
@@ -371,7 +365,6 @@ p {
 }
 .subscribe_input {
 	border: none;
-	/* использовать медиазапрос чтобы при увеличении размеров, расстояние не увеличивалось*/
 	margin-right: 3%;
 	border-radius: 5px;
 	flex: 1;
@@ -386,9 +379,6 @@ p {
 .subscribe_input:required:valid {
 	background-color: springgreen;
 }
-/* .input {
-	border: none;
-} */
 .subscribe_button {
 	color: white;
 	background-color: #FF2D2D;
@@ -409,14 +399,12 @@ p {
 	max-width: 83ch;
 }
 .message {
-	max-height: 580px;
 	display: flex;
 	margin-bottom: 100px;
 	justify-content: center;
+	flex-wrap: wrap;
 }
 .message_box1 {
-	/* height: 580px;
-	width: 730px; */
 	margin-right: 105px;
 }
 .message_box2 {
@@ -436,10 +424,8 @@ p {
 	color: white;
 	margin: 23px 0;
 }
-
 .message_box {
 	max-width: 730px;
-	/* max-height: 365px; */
 	display: flex;
 	flex-direction: column;
 	flex-wrap: wrap;
@@ -454,18 +440,15 @@ p {
 	font-family: Open Sans;
 	font-size: 16px;
 }
-
 .name_mail_wrap {
 	display: flex;
-	flex-wrap: wrap;
 	justify-content: space-between;
 }
 .name, .mail {
-	width: 315px;
+	width: 45%;
 	height: 70px;
 	padding-left: 20px;
 	margin-bottom: 20px;
-	/* flex: 1	1 340px; */
 }
 .message_text {
 	width: 700px;
@@ -514,8 +497,24 @@ footer {
 	justify-content: space-between;
 	align-items: center;
 }
-
 /* _________________________________ */
+@media screen and (max-width: 1300px) {
+	.left_empty_box {
+		display: none;
+	}
+	.right_empty_box {
+		display: none;
+	}
+	.message {
+		flex-direction: column;
+	}
+	.message_box1 {
+		margin: 0 auto 20px auto;
+	}
+	.message_box2 {
+		max-width: none;
+	}
+}
 @media screen and (max-width: 1200px) {
 	.text_h1 {
 		letter-spacing: normal;
@@ -533,8 +532,6 @@ footer {
 	.sub_text_h {
 		letter-spacing: normal;
 	}
-}
-@media screen and (max-width: 1100px) {
 	.text_h1 {
 		letter-spacing: normal;
 		font-size: 2em;
@@ -542,6 +539,18 @@ footer {
 	}
 	.sub_text_h {
 		letter-spacing: normal;
+	}
+}
+@media screen and (max-width: 880px) {
+	.team {
+		flex-direction: column;
+		align-items: center;
+	}
+	.team_photo_wrapper {
+		justify-content: center;
+	}
+	.lead_photo {
+		margin: 0;
 	}
 }
 @media screen and (max-width: 850px) {
@@ -557,6 +566,28 @@ footer {
 		font-size: 0.8em;
 		line-height: normal;
 		margin: 18px 0;
+	}
+	.message_box {
+		max-width: none;
+	}
+	.message_box1 {
+		margin: 2px;
+		margin-bottom: 20px;
+	}
+	.message_text {
+		width: auto;
+		margin: 0;
+	}
+}
+@media screen and (max-width: 700px) {
+	.name_mail_wrap {
+		flex-direction: column;
+	}
+	.name, .mail {
+		width: auto;
+	}
+	.gallery_options li {
+		margin: 0 2vw;
 	}
 }
 @media screen and (max-width: 600px) {
